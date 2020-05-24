@@ -4,25 +4,29 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
+
 @font-face {
   font-family: 'PT Sans Caption', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url("../fonts/PTSansCaption-Regular.ttf") format("truetype");
+  src:  url("../fonts/PTSansCaption-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: 'PT Sans Caption', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-display: fallback;
-  src: url("../fonts/PTSansCaption-Bold.ttf") format("truetype");
+  src:  url("../fonts/PTSansCaption-Bold.ttf") format("truetype");
 }
+
 body {
   font-family: 'PT Sans Caption', sans-serif;
   font-size: 16px;
@@ -34,11 +38,14 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
 }
+
+
 a {
   cursor: pointer;
   text-decoration: none;
   color: currentColor;
 }
+
 .container {
   padding: 1em 2em;
   box-sizing: content-box;
@@ -47,20 +54,25 @@ a {
   padding-right: 15px;
   max-width: 1110px;
 }
+
 /*
  * Remove text-shadow in selection highlight:
  */
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
+
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
+
 /*
  * A better looking default horizontal rule
  */
+
 hr {
   display: block;
   height: 1px;
@@ -69,10 +81,12 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers
  */
+
 audio,
 canvas,
 iframe,
@@ -81,86 +95,51 @@ svg,
 video {
   vertical-align: middle;
 }
+
 /*
  * Remove default fieldset styles.
  */
+
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
+
 /*
  * Allow only vertical resizing of textareas.
  */
+
 textarea {
   resize: vertical;
 }
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-nav {
-  width: 100%;
-  background-color: #ecedf2;
-  height: 1.85em;
-}
-nav .container {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.nav__layout {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav__item {
-  color: #9a9a9a;
-}
-.nav__link {
-  transition: color 300ms ease-in-out;
-}
-.nav__link:hover {
-  color: #676767;
-}
-.nav__mail,
-.nav__tel {
-  color: #005090;
-  font-weight: bold;
-  transition: color 300ms ease-in-out;
-}
-.nav__mail:hover,
-.nav__tel:hover {
-  color: #00172a;
-}
-.nav__time {
-  padding-left: 1.8em;
-  background-image: url("../img/i-clock.svg");
-  background-position: 0.4em center;
-  background-size: 1em;
-  background-repeat: no-repeat;
-}
-.nav__lang {
-  padding-left: 1.8em;
-  background-image: url("../img/i-lang.svg");
-  background-position: 0.4em center;
-  background-size: 1.1em;
-  background-repeat: no-repeat;
-}
+
+@import "header";
+@import "nav";
+
 /*
  * Hide visually and from screen readers
  */
+
 .hidden {
   display: none !important;
 }
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -173,11 +152,13 @@ nav .container {
   width: 1px;
   /* 1 */
 }
+
 /*
 * Extends the .sr-only class to allow the element
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
 */
+
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -188,12 +169,15 @@ nav .container {
   white-space: inherit;
   width: auto;
 }
+
 /*
 * Hide visually and from screen readers, but maintain layout
 */
+
 .invisible {
   visibility: hidden;
 }
+
 /*
 * Clearfix: contain floats
 *
@@ -205,6 +189,7 @@ nav .container {
 * 2. The use of `table` rather than `block` is only necessary if using
 *    `:before` to contain the top-margins of child elements.
 */
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -212,20 +197,28 @@ nav .container {
   display: table;
   /* 2 */
 }
+
 .clearfix:after {
   clear: both;
 }
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
+
 @media print {
   *,
   *:before,
@@ -262,6 +255,7 @@ nav .container {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   thead {
     display: table-header-group;
   }
@@ -280,4 +274,4 @@ nav .container {
     page-break-after: avoid;
   }
 }
-/*# sourceMappingURL=main.css.map */
+

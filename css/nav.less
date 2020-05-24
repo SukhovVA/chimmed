@@ -1,0 +1,60 @@
+nav {
+  width: 100%;
+  background-color: #ecedf2;
+  height: 1.85em;
+
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.nav {
+  &__layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    color: #9a9a9a;
+  }
+
+  &__link {
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      color: darken(#9a9a9a, 20%)
+    }
+  }
+
+
+  &__mail,
+  &__tel {
+    color: #005090;
+    font-weight: bold;
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      color: darken(#005090, 20%)
+    }
+  }
+
+  &__time {
+    padding-left: 1.8em;
+    background-image: url("../img/i-clock.svg");
+    background-position: .4em center;
+    background-size: 1em;
+    background-repeat: no-repeat;
+  }
+
+  &__lang {
+    padding-left: 1.8em;
+    background-image: url("../img/i-lang.svg");
+    background-position: .4em center;
+    background-size: 1.1em;
+    background-repeat: no-repeat;
+  }
+
+}
