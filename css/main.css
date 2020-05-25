@@ -537,6 +537,11 @@ footer {
   align-items: center;
   justify-content: center;
   margin-right: 1em;
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+}
+.footer__social-item:hover {
+  background-color: #e4087e;
 }
 .footer__social-item svg {
   max-width: 100%;
