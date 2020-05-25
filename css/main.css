@@ -407,11 +407,16 @@ section.goods {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  margin-right: -1em;
+  margin-left: -1em;
 }
 .content__item {
   flex-basis: 20%;
   max-width: 20%;
   padding: 1em;
+}
+.content__image img {
+  max-width: 100%;
 }
 .content__price {
   font-weight: bold;
