@@ -1,5 +1,4 @@
 section {
-  margin: 0 0 1em;
 }
 
 section.goods {
@@ -11,12 +10,13 @@ section.goods {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     h2 {
       font-weight: bold;
       color: @blue;
       padding-bottom: 1em;
+      margin-top: 0;
       padding-right: 3em;
       border-bottom: 1px solid #95ceea;
     }
@@ -26,9 +26,75 @@ section.goods {
     cursor: pointer;
     border-bottom: 1px solid @blue;
     transition: border-bottom-color 300ms ease-in-out;
+    padding-top: .5em;
     &:hover {
       color: #000;
       border-bottom-color: transparent;
     }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  &__item {
+    flex-basis: 20%;
+    max-width: 20%;
+    padding: 1em;
+  }
+  &__price {
+    font-weight: bold;
+    color: @blue;
+  }
+  button {
+    background-color: @purple;
+    border: 1px solid @purple;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+    &:hover {
+      border-color: @blue;
+      background-color: @blue;
+    }
+  }
+}
+
+.news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #ecedf2;
+  &__item {
+    flex-basis: 30%;
+    max-width: 30%;
+    background-color: #f8f9fb;
+  }
+  &__image {
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+  &__header {
+    font-weight: bold;
+    color: @blue;
+    margin: 1em 0;
+    font-size: 1.2em;
+    padding: 0 1em;
+  }
+  &__data {
+    padding: 0 1em;
+    color: #37a7df;
+    margin: 1em 0;
+  }
+  &__desc {
+    padding: 0 1em;
+    color: #676767;
   }
 }

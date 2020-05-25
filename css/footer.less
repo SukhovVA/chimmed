@@ -1,0 +1,29 @@
+footer {
+  background-color: #e6e6ec;
+  padding: 1em 0 0;
+  color: @blue;
+}
+
+.footer {
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__column {
+    flex-basis: 30%;
+    max-width: 30%;
+    font-weight: bold;
+  }
+  &__header {
+    text-transform: uppercase;
+    margin-bottom:  1em;
+  }
+  &__link {
+    &-city {
+      color: @grey;
+    }
+  }
+}
+
