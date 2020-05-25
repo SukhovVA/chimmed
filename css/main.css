@@ -107,6 +107,197 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.header {
+  background-color: #fbfbfd;
+}
+.header__placer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.header__logo img {
+  width: 200px;
+}
+.header__catalog {
+  color: #fff;
+  background-color: #005090;
+  width: 8em;
+  height: 2.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background-color 300ms ease-in-out;
+}
+.header__catalog:hover {
+  background-color: #e4087e;
+}
+.header__catalog svg {
+  fill: #fff;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+}
+.header form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+}
+.header form svg {
+  position: absolute;
+  left: 6.5em;
+  top: 0.5em;
+}
+.header__search {
+  flex-grow: 1;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.header__icons {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  padding-right: 1em;
+}
+.header__icons div {
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.25em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.header__icons div:hover svg {
+  fill: #005090;
+}
+.header__icons div svg {
+  width: 2em;
+  height: 2em;
+  fill: #9a9a9a;
+  transition: fill 300ms ease-in-out;
+}
+.header__caller {
+  height: 2.5em;
+  width: 6em;
+  background-color: #e4087e;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+}
+.header__caller:hover {
+  background-color: #005090;
+}
+.search__text {
+  height: 2.5em;
+  border: 1px solid #9a9a9a;
+  color: #9a9a9a;
+  margin-left: 0;
+  border-left: none;
+  padding-left: 2.5em;
+  outline: none;
+  border-radius: 0 4px 4px 0;
+  width: 100%;
+}
+.search__text:focus {
+  color: #000;
+}
+.search__text::-ms-clear {
+  display: none;
+}
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+.select-selected {
+  border-radius: 4px 0 0 4px;
+  padding-left: 0.8em;
+  padding-right: 1.8em;
+  padding-top: 0.3em;
+  height: 2.5em;
+  width: 6em;
+  vertical-align: middle;
+  border: 1px solid #9a9a9a;
+  color: #9a9a9a;
+  margin-right: 0;
+  background-color: #fbfbfd;
+  cursor: pointer;
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  outline: none;
+}
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 1em;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #9a9a9a transparent transparent transparent;
+}
+.select-selected.select-arrow-active {
+  border-radius: 4px 0 0 0;
+}
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #9a9a9a transparent;
+  top: 7px;
+}
+/* style the items (options), including the selected item: */
+.select-items div {
+  background-color: #fff;
+  padding-left: 1em;
+  color: #9a9a9a;
+  border: 1px solid #9a9a9a;
+  border-top: none;
+  border-bottom: none;
+}
+.select-items div:last-child {
+  border-radius: 0 0 4px 4px;
+  border-bottom: 1px solid #9a9a9a;
+}
+/* Style items (options): */
+.select-items {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  box-sizing: content-box;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-top: none;
+}
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+.select-items div:hover,
+.same-as-selected {
+  background-color: #9a9a9a;
+  color: #ffffff;
+}
 nav {
   width: 100%;
   background-color: #ecedf2;
@@ -119,6 +310,7 @@ nav .container {
 .nav__layout {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -154,6 +346,63 @@ nav .container {
   background-position: 0.4em center;
   background-size: 1.1em;
   background-repeat: no-repeat;
+}
+.header__navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.navbar__item {
+  padding-right: 2em;
+  color: #9a9a9a;
+  transition: color 300ms ease-in-out;
+  cursor: pointer;
+}
+.navbar__item:hover {
+  color: #005090;
+}
+.navbar__item:first-child {
+  color: #005090;
+}
+.navbar__item:first-child:hover {
+  color: #e4087e;
+}
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+.banner img {
+  width: 101%;
+}
+section {
+  margin: 0 0 1em;
+}
+section.goods {
+  background-color: #f4f5f6;
+}
+.section__header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.section__header h2 {
+  font-weight: bold;
+  color: #005090;
+  padding-bottom: 1em;
+  padding-right: 3em;
+  border-bottom: 1px solid #95ceea;
+}
+.section__subheader {
+  color: #005090;
+  cursor: pointer;
+  border-bottom: 1px solid #005090;
+  transition: border-bottom-color 300ms ease-in-out;
+}
+.section__subheader:hover {
+  color: #000;
+  border-bottom-color: transparent;
 }
 /*
  * Hide visually and from screen readers
@@ -278,6 +527,9 @@ nav .container {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+  img {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

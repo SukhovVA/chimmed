@@ -1,0 +1,213 @@
+.header {
+  background-color: #fbfbfd;
+
+  &__placer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  &__logo {
+    img {
+      width: 200px;
+    }
+  }
+
+  &__catalog {
+    color: #fff;
+    background-color: @blue;
+    width: 8em;
+    height: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background-color 300ms ease-in-out;
+    &:hover {
+      background-color: @purple;
+    }
+
+    svg {
+      fill: #fff;
+      width: 1.2em;
+      height: 1.2em;
+      margin-right: .5em;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    svg {
+      position: absolute;
+      left: 6.5em;
+      top: 0.5em;
+    }
+  }
+  &__search {
+    flex-grow: 1;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  &__icons {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    padding-right: 1em;
+    div {
+      width: 2.5em;
+      height: 2.5em;
+      padding: .25em;
+      margin-right: .5em;
+      cursor: pointer;
+      &:hover {
+        svg {
+          fill: @blue;
+        }
+      }
+      svg {
+        width: 2em;
+        height: 2em;
+        fill: @grey;
+        transition: fill 300ms ease-in-out;
+      }
+    }
+  }
+  &__caller {
+    height: 2.5em;
+    width: 6em;
+    background-color: @purple;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 1;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    transition: background-color 300ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: @blue;
+    }
+  }
+}
+
+.search {
+    &__text {
+    height: 2.5em;
+    border: 1px solid @grey;
+    color: @grey;
+    margin-left: 0;
+    border-left: none;
+    padding-left: 2.5em;
+    outline: none;
+    border-radius: 0 4px 4px 0;
+    width: 100%;
+    &:focus {
+      color: #000;
+    }
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  border-radius: 4px 0 0 4px;
+  padding-left: .8em;
+  padding-right: 1.8em;
+  padding-top: .3em;
+  height: 2.5em;
+  width: 6em;
+  vertical-align: middle;
+  border: 1px solid @grey;
+  color: @grey;
+  margin-right: 0;
+  background-color: #fbfbfd;
+  cursor: pointer;
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+  outline: none;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 1em;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: @grey transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active {
+  border-radius: 4px 0 0 0;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent @grey transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div {
+  background-color: #fff;
+  padding-left: 1em;
+  color: @grey;
+  border: 1px solid @grey;
+  border-top: none;
+  border-bottom: none;
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid @grey
+  }
+}
+
+/* Style items (options): */
+.select-items {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  box-sizing: content-box;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  border-top: none;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: @grey;
+  color: #ffffff;
+}

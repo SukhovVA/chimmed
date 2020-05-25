@@ -13,31 +13,32 @@ nav {
   &__layout {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
   }
 
   &__item {
-    color: #9a9a9a;
+    color: @grey;
   }
 
   &__link {
     transition: color 300ms ease-in-out;
 
     &:hover {
-      color: darken(#9a9a9a, 20%)
+      color: darken(@grey, 20%)
     }
   }
 
 
   &__mail,
   &__tel {
-    color: #005090;
+    color: @blue;
     font-weight: bold;
     transition: color 300ms ease-in-out;
 
     &:hover {
-      color: darken(#005090, 20%)
+      color: darken(@blue, 20%)
     }
   }
 

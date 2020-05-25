@@ -1,0 +1,23 @@
+.header__navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  &__item {
+    padding-right: 2em;
+    color: @grey;
+    transition: color 300ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: @blue;
+    }
+    &:first-child {
+      color: @blue;
+      &:hover {
+        color: @purple;
+      }
+    }
+  }
+}
